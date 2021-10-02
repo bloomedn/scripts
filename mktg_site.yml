@@ -5,3 +5,5 @@ patches:
         ENABLE_MKTG_SITE: true
     lms-env: |
         MKTG_URLS: {"ROOT": "https://bloomed.org.np"}
+    cms-env: |
+        MKTG_URLS: {"ROOT": "https://bloomed.org.np"}
