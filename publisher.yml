@@ -1,0 +1,13 @@
+name: publisher
+version: 12.0.0
+config:
+  defaults:
+    MFE_APP:
+      name: publisher
+      repository: "https://github.com/edx/frontend-app-publisher"
+      port: 18400
+patches:
+  discovery-development-settings: |
+    CORS_ORIGIN_WHITELIST = list(CORS_ORIGIN_WHITELIST) + ["{{ MFE_HOST }}:{{ PUBLISHER_MFE_APP['port'] }}"]
+  discovery-production-settings: |
+    CORS_ORIGIN_WHITELIST = list(CORS_ORIGIN_WHITELIST) + ["{{ MFE_HOST }}"]

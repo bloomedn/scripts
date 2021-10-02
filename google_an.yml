@@ -1,0 +1,7 @@
+name: googleanalytics
+version: 0.1.0
+patches:
+  openedx-common-settings: |
+    # googleanalytics special settings
+    #GOOGLE_ANALYTICS_ACCOUNT = "UA-654321-1"
+    #GOOGLE_ANALYTICS_TRACKING_ID = "UA-654321-1"

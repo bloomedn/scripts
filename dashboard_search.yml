@@ -1,0 +1,5 @@
+name: dashboard_search
+version: 1.0.0
+patches:
+  common-env-features: |
+    "ENABLE_DASHBOARD_SEARCH": false

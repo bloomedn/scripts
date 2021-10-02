@@ -1,0 +1,7 @@
+name: custom-http-headers
+version: 1.0.0
+patches:
+  nginx-lms: |
+    # Fix obsolete header in the pdfXBlock
+    proxy_hide_header X-Frame-Options;
+    add_header X-Frame-Options SAMEORIGIN;

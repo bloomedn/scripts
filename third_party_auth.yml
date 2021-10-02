@@ -1,0 +1,9 @@
+name: third-party-auth
+version: 1.0.0
+patches:
+  common-env-features: |
+    "ENABLE_THIRD_PARTY_AUTH": true
+  openedx-auth: |
+    "SOCIAL_AUTH_OAUTH_SECRETS": {"google-oauth2": "cMebxcKDPcDUr_I7MhhHfu7d"}
+  lms-env: |
+    "THIRD_PARTY_AUTH_BACKENDS": ["social_core.backends.google.GoogleOAuth2"]

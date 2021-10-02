@@ -1,0 +1,15 @@
+name: learning
+version: 12.0.0
+config:
+  defaults:
+    MFE_APP:
+      name: learning
+      repository: "https://github.com/edx/frontend-app-learning"
+      port: 2000
+patches:
+  discovery-development-settings: |
+    CORS_ORIGIN_WHITELIST = list(CORS_ORIGIN_WHITELIST) + ["{{ MFE_HOST }}:{{ PUBLISHER_MFE_APP['port'] }}"]
+  discovery-production-settings: |
+    CORS_ORIGIN_WHITELIST = list(CORS_ORIGIN_WHITELIST) + ["{{ MFE_HOST }}"]
+    CONTACT_URL = 'https://bloomed.org.np/contact'
+    ENABLE_JUMPNAV='true'

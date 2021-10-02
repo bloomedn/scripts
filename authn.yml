@@ -1,0 +1,13 @@
+name: authn
+version: "master"
+config:
+  defaults:
+    MFE_APP:
+      name: authn
+      repository: "https://github.com/edx/frontend-app-authn"
+      port: 1999
+patches:
+  discovery-development-settings: |
+    CORS_ORIGIN_WHITELIST = list(CORS_ORIGIN_WHITELIST) + ["{{ MFE_HOST }}:{{ AUTHN_MFE_APP['port'] }}"]
+  discovery-production-settings: |
+    CORS_ORIGIN_WHITELIST = list(CORS_ORIGIN_WHITELIST) + ["{{ MFE_HOST }}"]
