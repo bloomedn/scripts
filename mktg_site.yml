@@ -2,7 +2,7 @@ name: mktg_site
 version: 1.0.0
 patches:
     common-env-features: |
-        ENABLE_MKTG_SITE: true
+        ENABLE_MKTG_SITE: false
     lms-env: |
         MKTG_URLS: {"ROOT": "https://bloomed.org.np"}
     cms-env: |
