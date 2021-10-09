@@ -4,4 +4,4 @@ git pull
 tutor images build openedx
 tutor local settheme bloom-ed $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
 echo "restarting openedx"
-tutor local quickstart
+./quickstart.sh
