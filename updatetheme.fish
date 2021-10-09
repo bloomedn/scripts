@@ -1,3 +1,6 @@
+# Use the bash script
+# ./updatetheme.sh
+# This is legacy
 # Fish shell
 cd (tutor config printroot)/env/build/openedx/themes/bloom-ed
 git pull
