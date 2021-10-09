@@ -1,3 +1,4 @@
+#! /bin/bash
 cd "$(tutor config printroot)/env/build/openedx/themes/bloom-ed"
 git pull
 tutor images build openedx
