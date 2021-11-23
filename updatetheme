@@ -6,4 +6,4 @@ tutor local settheme bloom-ed $(tutor config printvalue LMS_HOST) $(tutor config
 echo "restarting openedx"
 # Change Working Direcotry to the previously working directory
 cd - 
-./quickstart.sh
+./quickstart
