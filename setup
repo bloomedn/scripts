@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# ecommerce HOST
+tutor config save --set ECOMMERCE_HOST=ecommerce.bloomed.org.np
+# discovery HOST  
+tutor config save --set DISCOVERY_HOST=discovery.bloomed.org.np
