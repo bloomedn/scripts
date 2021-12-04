@@ -1,0 +1,14 @@
+#! /bin/bash
+echo "Username"
+read username
+echo "Password"
+read password
+echo "Email"
+read password
+echo "Creating superuser in lms"
+echo $password | tutor local run lms ./manage.py lms createsuperuser $username $email
+echo "Creating superuser in discovery"
+echo $password | tutor local run discovery ./manage.py createsuperuser $username $email
+echo "Creating superuser in ecommerce"
+echo $password | tutor local run ecommerce ./manage.py createsuperuser $username $email
+echo $username
